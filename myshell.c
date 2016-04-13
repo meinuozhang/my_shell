@@ -16,7 +16,7 @@ int main()
 	fflush(stdout);
 	char buf[1024];
 	memset(buf,'\0',sizeof(buf));
-	ssize_t _size=read(0,buf,sizeof(buf)-1);//get value from inout
+	ssize_t _size=read(0,buf,sizeof(buf)-1);//get value from input
 	buf[_size-1]='\0';
 //	printf("%s\n",buf);
 	char *my_argv[64];
@@ -50,7 +50,7 @@ int main()
 	index=0;
 	for(;my_argv[index]!=NULL;index++)
 	{
-      printf("%s\n",buf);
+      printf("%s\n",my_argv[index]);
 	}
 	if(strcmp(my_argv[0],"cd")==0)//judge is build-in command?
 	{
